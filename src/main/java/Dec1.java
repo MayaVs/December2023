@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Dec1 {
     public void getNumbers() throws IOException, URISyntaxException {
-        URL resource = LastYearDec1.class.getResource("inputDec1");
+        URL resource = Dec1.class.getResource("inputDec1");
         String string = Files.readString(Path.of(resource.toURI()));
 
         List<String> words = List.of("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "1", "2", "3", "4", "5", "6", "7", "8", "9");
@@ -37,5 +37,4 @@ public class Dec1 {
                 .reduce(0, Integer::sum);
         System.out.println(val);
     }
-
 }
